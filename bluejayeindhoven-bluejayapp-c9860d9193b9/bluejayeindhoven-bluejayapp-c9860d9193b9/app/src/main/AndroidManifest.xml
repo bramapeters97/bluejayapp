@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.s152355.bluejayapp">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".NotificationChannels"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Blue Jay"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".CustomIp"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".LogIn"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Website"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ControlScreen"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WelcomeScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_main"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".FlyToLocation"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_fly_to_location"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StreamCameraFootage"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_stream_camera_footage"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".EmergenciesLog"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_emergencies_log"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ActionsLog"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_actions_log"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AboutApp"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_terms_of_agreement"
+            android:theme="@style/AppTheme" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>
